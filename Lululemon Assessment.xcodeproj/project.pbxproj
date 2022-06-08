@@ -36,7 +36,7 @@
 		CDE9B401285109700043B727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDE9B403285109720043B727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDE9B406285109720043B727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CDE9B408285109720043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE9B408285109720043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Lululemon Assessment/Configuration/Info.plist"; sourceTree = SOURCE_ROOT; };
 		CDE9B41228510ADA0043B727 /* Lululemon AssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lululemon AssessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentModelControllerTests.swift; sourceTree = "<group>"; };
 		CDE9B41628510ADA0043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 		CDE9B3F9285109700043B727 /* Lululemon Assessment */ = {
 			isa = PBXGroup;
 			children = (
-				CDE9B408285109720043B727 /* Info.plist */,
 				CDE9B41E285112AA0043B727 /* Configuration */,
 				CDE9B421285112F40043B727 /* Model */,
 				CDE9B41C285112930043B727 /* View */,
@@ -121,6 +120,7 @@
 		CDE9B41E285112AA0043B727 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				CDE9B408285109720043B727 /* Info.plist */,
 				CDE9B403285109720043B727 /* Assets.xcassets */,
 				CDE9B3FA285109700043B727 /* AppDelegate.swift */,
 				CDE9B3FC285109700043B727 /* SceneDelegate.swift */,
@@ -406,7 +406,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86J3SRZ52R;
-				INFOPLIST_FILE = "Lululemon Assessment/Info.plist";
+				INFOPLIST_FILE = "Lululemon Assessment/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -425,7 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86J3SRZ52R;
-				INFOPLIST_FILE = "Lululemon Assessment/Info.plist";
+				INFOPLIST_FILE = "Lululemon Assessment/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
