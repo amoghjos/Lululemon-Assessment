@@ -23,5 +23,13 @@ class GarmentModelControllerTests: XCTestCase {
         XCTAssertEqual(GarmentModelController.shared.totalGarments, garments.count)
     }
     
-    #warning("test get garment by alpha and creation time")
+    func test_get_garments_by_alphabetical_order() throws {
+        let garments = ["bGarment", "zzgarment","Fgarment", "Egarment","kgarment","Agarment"]
+        for garment in garments {
+            GarmentModelController.shared.addGarment(garment)
+        }
+        let output = GarmentModelController.shared.getGarments(by: .alphabetical)
+        let expected = ["Agarment","bGarment","Egarment","Fgarment","kgarment","zzgarment"]
+        XCTAssertEqual(output, expected)
+    }
 }

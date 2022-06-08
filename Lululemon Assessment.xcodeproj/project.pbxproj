@@ -16,6 +16,7 @@
 		CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */; };
 		CDE9B420285112F00043B727 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B41F285112F00043B727 /* Constants.swift */; };
 		CDE9B42328514EEE0043B727 /* GarmentModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B42228514EEE0043B727 /* GarmentModelController.swift */; };
+		CDE9B426285155450043B727 /* GarmentsListOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B425285155450043B727 /* GarmentsListOrder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		CDE9B41628510ADA0043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE9B41F285112F00043B727 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CDE9B42228514EEE0043B727 /* GarmentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentModelController.swift; sourceTree = "<group>"; };
+		CDE9B425285155450043B727 /* GarmentsListOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsListOrder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,9 +134,18 @@
 			isa = PBXGroup;
 			children = (
 				CDE9B41F285112F00043B727 /* Constants.swift */,
-				CDE9B42228514EEE0043B727 /* GarmentModelController.swift */,
+				CDE9B4242851539F0043B727 /* GarmentModel */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CDE9B4242851539F0043B727 /* GarmentModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDE9B42228514EEE0043B727 /* GarmentModelController.swift */,
+				CDE9B425285155450043B727 /* GarmentsListOrder.swift */,
+			);
+			path = GarmentModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 				CDE9B3FF285109700043B727 /* ViewController.swift in Sources */,
 				CDE9B42328514EEE0043B727 /* GarmentModelController.swift in Sources */,
 				CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */,
+				CDE9B426285155450043B727 /* GarmentsListOrder.swift in Sources */,
 				CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */,
 				CDE9B420285112F00043B727 /* Constants.swift in Sources */,
 			);
