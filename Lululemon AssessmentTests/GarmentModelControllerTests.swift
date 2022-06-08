@@ -9,13 +9,19 @@ import XCTest
 @testable import Lululemon_Assessment
 
 class GarmentModelControllerTests: XCTestCase {
+    
+    func test_add_garment_increments_total_garment_count() throws {
+        //arrange
+        let garments = ["Jeans", "Shirts", "Pants"]
+        
+        //act
+        for garment in garments {
+            GarmentModelController.shared.addGarment(garment)
+        }
 
-    override func setUpWithError() throws {
+        //assert
+        XCTAssertEqual(GarmentModelController.shared.totalGarments, garments.count)
     }
-
-    override func tearDownWithError() throws {
-    }
-
-    func test_add_garment() throws {
-    }
+    
+    #warning("test get garment by alpha and creation time")
 }

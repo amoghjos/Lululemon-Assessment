@@ -15,6 +15,7 @@
 		CDE9B407285109720043B727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B405285109720043B727 /* LaunchScreen.storyboard */; };
 		CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */; };
 		CDE9B420285112F00043B727 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B41F285112F00043B727 /* Constants.swift */; };
+		CDE9B42328514EEE0043B727 /* GarmentModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B42228514EEE0043B727 /* GarmentModelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentModelControllerTests.swift; sourceTree = "<group>"; };
 		CDE9B41628510ADA0043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE9B41F285112F00043B727 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CDE9B42228514EEE0043B727 /* GarmentModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentModelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		CDE9B3F9285109700043B727 /* Lululemon Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				CDE9B408285109720043B727 /* Info.plist */,
 				CDE9B41E285112AA0043B727 /* Configuration */,
 				CDE9B421285112F40043B727 /* Model */,
 				CDE9B41C285112930043B727 /* View */,
@@ -118,7 +121,6 @@
 		CDE9B41E285112AA0043B727 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				CDE9B408285109720043B727 /* Info.plist */,
 				CDE9B403285109720043B727 /* Assets.xcassets */,
 				CDE9B3FA285109700043B727 /* AppDelegate.swift */,
 				CDE9B3FC285109700043B727 /* SceneDelegate.swift */,
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE9B41F285112F00043B727 /* Constants.swift */,
+				CDE9B42228514EEE0043B727 /* GarmentModelController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE9B3FF285109700043B727 /* ViewController.swift in Sources */,
+				CDE9B42328514EEE0043B727 /* GarmentModelController.swift in Sources */,
 				CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */,
 				CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */,
 				CDE9B420285112F00043B727 /* Constants.swift in Sources */,
