@@ -13,7 +13,18 @@
 		CDE9B402285109700043B727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B400285109700043B727 /* Main.storyboard */; };
 		CDE9B404285109720043B727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B403285109720043B727 /* Assets.xcassets */; };
 		CDE9B407285109720043B727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B405285109720043B727 /* LaunchScreen.storyboard */; };
+		CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDE9B41728510ADA0043B727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDE9B3EF285109700043B727 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDE9B3F6285109700043B727;
+			remoteInfo = "Lululemon Assessment";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CDE9B3F7285109700043B727 /* Lululemon Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lululemon Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +35,20 @@
 		CDE9B403285109720043B727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDE9B406285109720043B727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDE9B408285109720043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE9B41228510ADA0043B727 /* Lululemon AssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lululemon AssessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentModelControllerTests.swift; sourceTree = "<group>"; };
+		CDE9B41628510ADA0043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CDE9B3F4285109700043B727 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE9B40F28510ADA0043B727 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE9B3F9285109700043B727 /* Lululemon Assessment */,
+				CDE9B41328510ADA0043B727 /* Lululemon AssessmentTests */,
 				CDE9B3F8285109700043B727 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE9B3F7285109700043B727 /* Lululemon Assessment.app */,
+				CDE9B41228510ADA0043B727 /* Lululemon AssessmentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +88,15 @@
 				CDE9B408285109720043B727 /* Info.plist */,
 			);
 			path = "Lululemon Assessment";
+			sourceTree = "<group>";
+		};
+		CDE9B41328510ADA0043B727 /* Lululemon AssessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */,
+				CDE9B41628510ADA0043B727 /* Info.plist */,
+			);
+			path = "Lululemon AssessmentTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +119,24 @@
 			productReference = CDE9B3F7285109700043B727 /* Lululemon Assessment.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CDE9B41128510ADA0043B727 /* Lululemon AssessmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDE9B41B28510ADA0043B727 /* Build configuration list for PBXNativeTarget "Lululemon AssessmentTests" */;
+			buildPhases = (
+				CDE9B40E28510ADA0043B727 /* Sources */,
+				CDE9B40F28510ADA0043B727 /* Frameworks */,
+				CDE9B41028510ADA0043B727 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDE9B41828510ADA0043B727 /* PBXTargetDependency */,
+			);
+			name = "Lululemon AssessmentTests";
+			productName = "Lululemon AssessmentTests";
+			productReference = CDE9B41228510ADA0043B727 /* Lululemon AssessmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +148,10 @@
 				TargetAttributes = {
 					CDE9B3F6285109700043B727 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					CDE9B41128510ADA0043B727 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CDE9B3F6285109700043B727;
 					};
 				};
 			};
@@ -115,6 +169,7 @@
 			projectRoot = "";
 			targets = (
 				CDE9B3F6285109700043B727 /* Lululemon Assessment */,
+				CDE9B41128510ADA0043B727 /* Lululemon AssessmentTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +182,13 @@
 				CDE9B407285109720043B727 /* LaunchScreen.storyboard in Resources */,
 				CDE9B404285109720043B727 /* Assets.xcassets in Resources */,
 				CDE9B402285109700043B727 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDE9B41028510ADA0043B727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +205,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDE9B40E28510ADA0043B727 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDE9B41828510ADA0043B727 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDE9B3F6285109700043B727 /* Lululemon Assessment */;
+			targetProxy = CDE9B41728510ADA0043B727 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CDE9B400285109700043B727 /* Main.storyboard */ = {
@@ -319,6 +397,46 @@
 			};
 			name = Release;
 		};
+		CDE9B41928510ADA0043B727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86J3SRZ52R;
+				INFOPLIST_FILE = "Lululemon AssessmentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.craftedthoughts.Lululemon-AssessmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lululemon Assessment.app/Lululemon Assessment";
+			};
+			name = Debug;
+		};
+		CDE9B41A28510ADA0043B727 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86J3SRZ52R;
+				INFOPLIST_FILE = "Lululemon AssessmentTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.craftedthoughts.Lululemon-AssessmentTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lululemon Assessment.app/Lululemon Assessment";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +454,15 @@
 			buildConfigurations = (
 				CDE9B40C285109720043B727 /* Debug */,
 				CDE9B40D285109720043B727 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDE9B41B28510ADA0043B727 /* Build configuration list for PBXNativeTarget "Lululemon AssessmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDE9B41928510ADA0043B727 /* Debug */,
+				CDE9B41A28510ADA0043B727 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
