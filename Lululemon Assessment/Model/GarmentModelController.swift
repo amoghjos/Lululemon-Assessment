@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct GarmentModelController {
+class GarmentModelController {
+    //I'm using a singleton design pattern to ensure there exists only one instance which contains all the garments user have created and have provided APIs below to access the storage
     static let shared = GarmentModelController()
     
-    var totalGarments = 0
+    private var garments = [String]()
+    
+    var totalGarments: Int {
+        return garments.count
+    }
     
     func addGarment(_ garment: String){
-        
+        garments.append(garment)
     }
 }
