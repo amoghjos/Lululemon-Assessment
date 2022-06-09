@@ -10,4 +10,8 @@ import Foundation
 enum GarmentsListOrder: Int {
     case alphabetical
     case creationTime
+    
+    static func getOrdering(from index: Int) -> GarmentsListOrder {
+        return GarmentsListOrder.init(rawValue: index) ?? .alphabetical
+    }
 }

@@ -27,7 +27,7 @@ class GarmentModelController {
         garments.append(garment)
     }
     
-    func getGarments(by order: GarmentsListOrder) -> [String] {
+    func getGarments(by order: GarmentsListOrder = .alphabetical) -> [String] {
         return garments
             .sorted {
                 switch order {

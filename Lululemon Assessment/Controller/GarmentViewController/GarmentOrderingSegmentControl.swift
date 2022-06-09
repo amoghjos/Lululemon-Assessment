@@ -17,9 +17,8 @@ class GarmentOrderingSegmentControl: UISegmentedControl {
     }
     
     @objc func segmentedValueChanged() {
-        if let order = GarmentsListOrder.init(rawValue: selectedSegmentIndex) {
-            delegate?.orderingChanged(to: order)
-        }
+        let order = GarmentsListOrder.getOrdering(from: selectedSegmentIndex)
+        delegate?.orderingChanged(to: order)
     }
 }
 
