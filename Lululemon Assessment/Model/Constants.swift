@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum K {
+    enum Identifiers {
+        static let garmentTableViewCell = "GarmentTableViewCell"
+    }
+    
+    enum SampleData {
+        static let garments = ["Dress","Jeans", "Shirt", "Pant","Tshirt"]
+    }
+}
