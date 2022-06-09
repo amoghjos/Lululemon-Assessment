@@ -16,43 +16,44 @@ class GarmentViewControllerDataSourceTests: XCTestCase {
     var tableView: UITableView!
     
     override func setUpWithError() throws {
-        mockedDelegate = GarmentViewControllerDataSourceDelegateMock()
+        mockedDelegate = GarmentViewControllerDataSourceDelegateMock(K.SampleData.garments)
         sut = GarmentViewControllerDataSource(delegate: mockedDelegate)
-        tableView = UITableView()
+        let vc = try XCTUnwrap(K.storyboard.instantiateViewController(withIdentifier: K.Identifiers.garmentViewController) as? GarmentViewController)
+        
+        vc.loadView()
+        tableView = vc.tableView
         tableView.dataSource = sut
     }
 
     override func tearDownWithError() throws {
         sut = nil
         tableView = nil
+        mockedDelegate = nil
     }
-
-    func test_number_of_rows_initial_state() throws {
+   
+    func test_number_of_rows_after_adding_few_garments() throws {
         let actualNumberOfRows = sut.tableView(tableView, numberOfRowsInSection: 0)
-        XCTAssertEqual(actualNumberOfRows, 0)
+        XCTAssertEqual(actualNumberOfRows, 5)
     }
     
-    func test_number_of_rows_after_adding_5_garments() throws {
-        let expectedGarments = ["Dress","Jeans", "Shirt", "Pant","Tshirt"]
+    func test_cell_for_rows_after_adding_few_garments() throws {
 
-        let delegate = try XCTUnwrap(sut.delegate)
-        
-        for garment in expectedGarments {
-            delegate.garmentModelController.addGarment(garment)
+
+    
+        for i in 0..<K.SampleData.garments.count {
+            let garment = K.SampleData.garments[i]
+            let indexPath = IndexPath(item: i, section: 0)
+            let cell = sut.tableView(tableView, cellForRowAt: indexPath)
+            let textLabel = try XCTUnwrap(cell.textLabel)
+            XCTAssertEqual(textLabel.text,garment)
         }
-        
-        let actualNumberOfRows = sut.tableView(tableView, numberOfRowsInSection: 0)
-        XCTAssertEqual(actualNumberOfRows, expectedGarments.count)
     }
 }
 
 class GarmentViewControllerDataSourceDelegateMock: GarmentViewControllerDataSourceDelegate {
-    var garmentModelController: GarmentModelController
+    var garments: [String]
     
-    let currentOrdering: GarmentsListOrder
-    
-    init(_ ordering: GarmentsListOrder = .alphabetical) {
-        currentOrdering = ordering
-        garmentModelController = GarmentModelController()
+    init(_ garments: [String]) {
+        self.garments = garments
     }
 }
