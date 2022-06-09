@@ -156,8 +156,8 @@
 		CDE9B4272851C9620043B727 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CDE9B4282851C98D0043B727 /* GarmentViewControllerDataSourceTests.swift */,
 				CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */,
+				CDE9B4282851C98D0043B727 /* GarmentViewControllerDataSourceTests.swift */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
