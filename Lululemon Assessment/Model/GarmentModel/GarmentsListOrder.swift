@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GarmentsListOrder {
+enum GarmentsListOrder: Int {
     case alphabetical
     case creationTime
 }

@@ -8,6 +8,12 @@
 import UIKit
 
 enum K {
+    static var storyboard: UIStoryboard {
+        let bundle = Bundle(identifier: "com.craftedthoughts.Lululemon-Assessment")
+        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        return storyboard
+    }
+    
     enum Identifiers {
         static let garmentTableViewCell = "GarmentTableViewCell"
         static let garmentViewController = "GarmentViewController"
