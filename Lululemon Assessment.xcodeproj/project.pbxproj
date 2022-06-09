@@ -105,8 +105,8 @@
 		CDE9B41C285112930043B727 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CDE9B405285109720043B727 /* LaunchScreen.storyboard */,
 				CDE9B400285109700043B727 /* Main.storyboard */,
+				CDE9B405285109720043B727 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
