@@ -15,10 +15,8 @@ class GarmentViewControllerDataSourceTests: XCTestCase {
     var tableView: UITableView!
     
     override func setUpWithError() throws {
-        let vc = K.storyboard.instantiateViewController(withIdentifier: K.Identifiers.garmentViewController)
-        let garmentViewController = try XCTUnwrap(vc as? GarmentViewController)
-        garmentViewController.loadView()
-        tableView = garmentViewController.tableView
+        tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: K.Identifiers.garmentTableViewCell)
         tableView.dataSource = sut
     }
 
