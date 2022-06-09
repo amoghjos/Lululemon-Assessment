@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GarmentViewController: UIViewController {
+class GarmentViewController: UIViewController, GarmentViewControllerDataSourceDelegate {
     var garments = K.SampleData.garments
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,8 +21,4 @@ class GarmentViewController: UIViewController {
         dataSource = GarmentViewControllerDataSource(delegate: self)
         tableView.dataSource = dataSource
     }
-}
-
-extension GarmentViewController: GarmentViewControllerDataSourceDelegate {
-    
 }
