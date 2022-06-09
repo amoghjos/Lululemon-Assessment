@@ -8,21 +8,21 @@
 import UIKit
 
 class GarmentViewController: UIViewController {
-
+    var garments = K.SampleData.garments
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    var dataSource: GarmentViewControllerDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setup data source
+        dataSource = GarmentViewControllerDataSource(delegate: self)
+        tableView.dataSource = dataSource
     }
 }
 
-#warning("replace this with other data source")
-extension GarmentViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
+extension GarmentViewController: GarmentViewControllerDataSourceDelegate {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
 }
