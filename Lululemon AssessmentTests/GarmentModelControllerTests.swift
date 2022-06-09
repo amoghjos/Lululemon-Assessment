@@ -47,8 +47,20 @@ class GarmentModelControllerTests: XCTestCase {
     
     
     func test_get_garments_by_creation_time_order() throws {
-        for i in 1...10 {
-            
+        var expected = [String]()
+        
+        let garmentNames = ["bGarment", "zzgarment","Fgarment", "Egarment","kgarment","Agarment"]
+        
+        for i in 0..<garmentNames.count {
+            let garmentName = garmentNames[i]
+            let garment = "\(garmentName): created \(i+1)" //using index to indicate which garment was created first
+            expected.append(garment)
+            sleep(1) //1 second delay to setup different creation time
+            sut.addGarment(garment)
         }
+        
+        let output = sut.getGarments(by: .creationTime)
+        
+        XCTAssertEqual(expected, output)
     }
 }

@@ -9,4 +9,5 @@ import Foundation
 
 enum GarmentsListOrder {
     case alphabetical
+    case creationTime
 }
