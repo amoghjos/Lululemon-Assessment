@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GarmentViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+#warning("replace this with other data source")
+extension GarmentViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
