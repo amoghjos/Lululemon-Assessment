@@ -8,22 +8,21 @@
 import Foundation
 
 class GarmentModelController {
-    //I'm using a singleton design pattern to ensure there exists only one instance which contains all the garments user have created and have provided APIs below to access the garments storage
-    static let shared = GarmentModelController()
     
+    //setting storage are private to hide implementation details of the model and making APIs below to allow developer to interact with our model
     private var garments = [String]()
-    
-    private init(){}
     
     var totalGarments: Int {
         return garments.count
     }
     
-    func addGarment(_ garment: String){
-        garments.append(garment)
+    func addGarment(_ name: String){
+        garments.append(name)
     }
     
     func getGarments(by order: GarmentsListOrder) -> [String] {
-        return []
+        return garments.sorted {
+            $0.lowercased() < $1.lowercased()
+        }
     }
 }

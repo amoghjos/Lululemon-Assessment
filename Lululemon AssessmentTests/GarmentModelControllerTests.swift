@@ -10,26 +10,45 @@ import XCTest
 
 class GarmentModelControllerTests: XCTestCase {
     
+    var sut: GarmentModelController!
+    
+    override func setUpWithError() throws {
+        sut = GarmentModelController()
+    }
+    
+    override func tearDownWithError() throws {
+        sut = nil
+    }
+    
     func test_add_garment_increments_total_garment_count() throws {
         //arrange
         let garments = ["Jeans", "Shirts", "Pants"]
         
         //act
         for garment in garments {
-            GarmentModelController.shared.addGarment(garment)
+            sut.addGarment(garment)
         }
 
         //assert
-        XCTAssertEqual(GarmentModelController.shared.totalGarments, garments.count)
+        XCTAssertEqual(sut.totalGarments, garments.count)
     }
     
     func test_get_garments_by_alphabetical_order() throws {
         let garments = ["bGarment", "zzgarment","Fgarment", "Egarment","kgarment","Agarment"]
+        
         for garment in garments {
-            GarmentModelController.shared.addGarment(garment)
+            sut.addGarment(garment)
         }
-        let output = GarmentModelController.shared.getGarments(by: .alphabetical)
+        
+        let output = sut.getGarments(by: .alphabetical)
         let expected = ["Agarment","bGarment","Egarment","Fgarment","kgarment","zzgarment"]
         XCTAssertEqual(output, expected)
+    }
+    
+    
+    func test_get_garments_by_creation_time_order() throws {
+        for i in 1...10 {
+            
+        }
     }
 }
