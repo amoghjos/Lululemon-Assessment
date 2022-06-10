@@ -19,7 +19,8 @@ class GarmentModelController {
     }
     
     func getGarments(by order: GarmentsListOrder = .alphabetical) -> [String] {
-        return PersistenceStorage.getGarments()
+        let garments = PersistenceStorage.getGarments()
+        return garments
             .sorted {
                 switch order {
                 case .creationTime:
