@@ -61,7 +61,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="List" largeTitleDisplayMode="never" id="j1L-X8-AWH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1y7-dv-RHm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1y7-dv-RHm">
+                            <connections>
+                                <segue destination="Jlc-bR-V3M" kind="presentation" id="kyI-Nw-RSs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="garmentOrderingSegmentControl" destination="0Ma-w6-Ptr" id="g5X-5l-l0s"/>
@@ -71,6 +75,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="75.669642857142847"/>
+        </scene>
+        <!--AddGarment-->
+        <scene sceneID="rni-vm-PEN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddGarment" id="Jlc-bR-V3M" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuh-fx-3KB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WYM-1s-2Jh">
