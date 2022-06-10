@@ -91,6 +91,13 @@
 			path = AddGarmentViewController;
 			sourceTree = "<group>";
 		};
+		CDDFE0212853AFE300143583 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		CDE9B3EE285109700043B727 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE9B41F285112F00043B727 /* Constants.swift */,
+				CDDFE0212853AFE300143583 /* CoreData */,
 				CDE9B4242851539F0043B727 /* GarmentModel */,
 			);
 			path = Model;
