@@ -10,30 +10,26 @@ import Foundation
 //Inspiration: https://www.swiftbysundell.com/articles/model-controllers-in-swift/
 class GarmentModelController {
     
-    //setting storage are private to hide implementation details of the model and making APIs below to allow developer to interact with GarmentModelController
-    private var garments = [Garment]()
-    
     var totalGarments: Int {
-        return garments.count
+        return PersistenceStorage.getGarments().count
     }
     
     func addGarment(_ garmentName: String){
-        let garment = Garment(name: garmentName, creationTime: Date())
-        garments.append(garment)
+        PersistenceStorage.addGarment(garmentName)
     }
     
     func getGarments(by order: GarmentsListOrder = .alphabetical) -> [String] {
-        return garments
+        return PersistenceStorage.getGarments()
             .sorted {
                 switch order {
                 case .creationTime:
-                    return $0.creationTime > $0.creationTime //decending order: latest garments first
+                    return $0.creationTime! > $0.creationTime! //decending order: latest garments first
                 case .alphabetical:
-                    return $0.name.lowercased() < $1.name.lowercased() //ascending order
+                    return $0.name!.lowercased() < $1.name!.lowercased() //ascending order
                 }
             }
             .map {
-                $0.name
+                $0.name!
             }
     }
 }
