@@ -12,8 +12,7 @@
 		CDAE26DF2852D9C900CDFC27 /* GarmentViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */; };
 		CDAE26E12852F6F000CDFC27 /* AddGarment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAE26E02852F6F000CDFC27 /* AddGarment.storyboard */; };
 		CDAE26E3285312D500CDFC27 /* AddGarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26E2285312D500CDFC27 /* AddGarmentViewController.swift */; };
-		CDAE26E8285315CE00CDFC27 /* AddGarmentTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26E7285315CE00CDFC27 /* AddGarmentTextFieldTests.swift */; };
-		CDAE26EA285316A500CDFC27 /* AddGarmentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26E9285316A500CDFC27 /* AddGarmentTextField.swift */; };
+		CDAE26EC2853260B00CDFC27 /* AddGarmentLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26EB2853260B00CDFC27 /* AddGarmentLogicController.swift */; };
 		CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FA285109700043B727 /* AppDelegate.swift */; };
 		CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FC285109700043B727 /* SceneDelegate.swift */; };
 		CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FE285109700043B727 /* GarmentViewController.swift */; };
@@ -44,8 +43,7 @@
 		CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentViewControllerTests.swift; sourceTree = "<group>"; };
 		CDAE26E02852F6F000CDFC27 /* AddGarment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddGarment.storyboard; sourceTree = "<group>"; };
 		CDAE26E2285312D500CDFC27 /* AddGarmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentViewController.swift; sourceTree = "<group>"; };
-		CDAE26E7285315CE00CDFC27 /* AddGarmentTextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentTextFieldTests.swift; sourceTree = "<group>"; };
-		CDAE26E9285316A500CDFC27 /* AddGarmentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentTextField.swift; sourceTree = "<group>"; };
+		CDAE26EB2853260B00CDFC27 /* AddGarmentLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentLogicController.swift; sourceTree = "<group>"; };
 		CDE9B3F7285109700043B727 /* Lululemon Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lululemon Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE9B3FA285109700043B727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE9B3FC285109700043B727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				CDAE26E2285312D500CDFC27 /* AddGarmentViewController.swift */,
-				CDAE26E9285316A500CDFC27 /* AddGarmentTextField.swift */,
+				CDAE26EB2853260B00CDFC27 /* AddGarmentLogicController.swift */,
 			);
 			path = AddGarmentViewController;
 			sourceTree = "<group>";
@@ -99,14 +97,6 @@
 				CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */,
 			);
 			path = GarmentViewController;
-			sourceTree = "<group>";
-		};
-		CDAE26E6285315A400CDFC27 /* AddGarmentViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CDAE26E7285315CE00CDFC27 /* AddGarmentTextFieldTests.swift */,
-			);
-			path = AddGarmentViewController;
 			sourceTree = "<group>";
 		};
 		CDE9B3EE285109700043B727 = {
@@ -200,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				CDAE26E52853159500CDFC27 /* GarmentViewController */,
-				CDAE26E6285315A400CDFC27 /* AddGarmentViewController */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
@@ -324,12 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAE26EA285316A500CDFC27 /* AddGarmentTextField.swift in Sources */,
 				CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */,
 				CDE9B42328514EEE0043B727 /* GarmentModelController.swift in Sources */,
 				CDAE26E3285312D500CDFC27 /* AddGarmentViewController.swift in Sources */,
 				CDAE26DD285295E700CDFC27 /* GarmentOrderingSegmentControl.swift in Sources */,
 				CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */,
+				CDAE26EC2853260B00CDFC27 /* AddGarmentLogicController.swift in Sources */,
 				CDE9B426285155450043B727 /* GarmentsListOrder.swift in Sources */,
 				CDE9B42D2851CC8E0043B727 /* GarmentViewControllerDataSource.swift in Sources */,
 				CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */,
@@ -345,7 +334,6 @@
 				CDE9B4292851C98D0043B727 /* GarmentViewControllerDataSourceTests.swift in Sources */,
 				CDAE26DF2852D9C900CDFC27 /* GarmentViewControllerTests.swift in Sources */,
 				CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */,
-				CDAE26E8285315CE00CDFC27 /* AddGarmentTextFieldTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

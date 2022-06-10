@@ -13,6 +13,7 @@ fileprivate struct Garment {
     let creationTime: Date
 }
 
+//Inspiration: https://www.swiftbysundell.com/articles/model-controllers-in-swift/
 class GarmentModelController {
     
     //setting storage are private to hide implementation details of the model and making APIs below to allow developer to interact with GarmentModelController

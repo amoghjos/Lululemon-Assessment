@@ -26,11 +26,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter garment name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAN-e4-SeH" userLabel="Garment Name Text Field" customClass="AddGarmentTextField" customModule="Lululemon_Assessment" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter garment name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAN-e4-SeH" userLabel="Garment Name Text Field">
                                         <rect key="frame" x="0.0" y="39" width="374" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="garmentNameTextFieldEditingChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="tbq-Tb-rOX"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -50,12 +53,16 @@
                                 <action selector="cancelButton:" destination="Y6W-OH-hqX" id="nO9-iy-Shw"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="fwE-zC-u9l">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="fwE-zC-u9l">
                             <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="saveButton:" destination="Y6W-OH-hqX" id="JOz-YK-36E"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="garmentNameTextField" destination="uAN-e4-SeH" id="dtF-e1-fb0"/>
+                        <outlet property="saveButton" destination="fwE-zC-u9l" id="eMt-5m-gGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
