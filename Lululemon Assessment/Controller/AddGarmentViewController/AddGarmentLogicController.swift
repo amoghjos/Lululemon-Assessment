@@ -7,7 +7,8 @@
 
 import Foundation
 
-//Logic controllers holds the business logic of view controller. Inspiration: https://www.youtube.com/watch?v=Ni70aTksJWg
+//Logic controllers holds the business logic of view controller.
+//Inspiration: https://www.youtube.com/watch?v=Ni70aTksJWg
 
 struct AddGarmentLogicController {
     

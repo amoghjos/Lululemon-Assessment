@@ -36,4 +36,8 @@ enum K {
         static let garments = ["Jeans", "Shirt", "Pant","Tshirt","Dress"]
         static let garmentsSortedAlphabetically = ["Dress","Jeans","Pant", "Shirt","Tshirt"]
     }
+    
+    enum DataModel {
+        static let garmentDataModel = "GarmentDataModel"
+    }
 }
