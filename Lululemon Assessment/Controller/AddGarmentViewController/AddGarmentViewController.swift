@@ -12,6 +12,7 @@ class AddGarmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        garmentNameTextField.setUp()
     }
     
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {

@@ -7,6 +7,21 @@
 
 import UIKit
 
-class AddGarmentTextField: UITextField {
+protocol AddGarmentTextFieldDelegate: AnyObject {
+    func hasValidGarmentNameWritten(_ bool: Bool)
+}
 
+class AddGarmentTextField: UITextField {
+    weak var addGarmentTextFieldDelegate: AddGarmentTextFieldDelegate?
+    
+    func setUp(){
+        becomeFirstResponder()
+        delegate = self
+    }
+}
+
+extension AddGarmentTextField: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        addGarmentTextFieldDelegate?.hasValidGarmentNameWritten(true)
+    }
 }
