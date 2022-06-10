@@ -89,16 +89,6 @@
 			path = AddGarmentViewController;
 			sourceTree = "<group>";
 		};
-		CDAE26E52853159500CDFC27 /* GarmentViewController */ = {
-			isa = PBXGroup;
-			children = (
-				CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */,
-				CDE9B4282851C98D0043B727 /* GarmentViewControllerDataSourceTests.swift */,
-				CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */,
-			);
-			path = GarmentViewController;
-			sourceTree = "<group>";
-		};
 		CDE9B3EE285109700043B727 = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +179,9 @@
 		CDE9B4272851C9620043B727 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CDAE26E52853159500CDFC27 /* GarmentViewController */,
+				CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */,
+				CDE9B4282851C98D0043B727 /* GarmentViewControllerDataSourceTests.swift */,
+				CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";

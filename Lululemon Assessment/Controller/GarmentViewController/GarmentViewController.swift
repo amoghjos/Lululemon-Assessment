@@ -72,6 +72,8 @@ extension GarmentViewController: AddGarmentViewControllerDelegate {
     func garmentAdded(with name: String) {
         garmentModelController.addGarment(name)
         updateGarments()
+        
+        //I'm currently using tableView.reload() but it would be more user friendly (and efficient) if we can insert row at an given index so it is an area of improvment :)
         tableView.reloadData()
     }
 }
