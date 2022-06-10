@@ -13,7 +13,7 @@
 		CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FA285109700043B727 /* AppDelegate.swift */; };
 		CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FC285109700043B727 /* SceneDelegate.swift */; };
 		CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FE285109700043B727 /* GarmentViewController.swift */; };
-		CDE9B402285109700043B727 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B400285109700043B727 /* Main.storyboard */; };
+		CDE9B402285109700043B727 /* Garment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B400285109700043B727 /* Garment.storyboard */; };
 		CDE9B404285109720043B727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B403285109720043B727 /* Assets.xcassets */; };
 		CDE9B407285109720043B727 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDE9B405285109720043B727 /* LaunchScreen.storyboard */; };
 		CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B41428510ADA0043B727 /* GarmentModelControllerTests.swift */; };
@@ -42,7 +42,7 @@
 		CDE9B3FA285109700043B727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE9B3FC285109700043B727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDE9B3FE285109700043B727 /* GarmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentViewController.swift; sourceTree = "<group>"; };
-		CDE9B401285109700043B727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDE9B401285109700043B727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Garment.storyboard; sourceTree = "<group>"; };
 		CDE9B403285109720043B727 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDE9B406285109720043B727 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDE9B408285109720043B727 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Lululemon Assessment/Configuration/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -116,7 +116,7 @@
 		CDE9B41C285112930043B727 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CDE9B400285109700043B727 /* Main.storyboard */,
+				CDE9B400285109700043B727 /* Garment.storyboard */,
 				CDE9B405285109720043B727 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -269,7 +269,7 @@
 			files = (
 				CDE9B407285109720043B727 /* LaunchScreen.storyboard in Resources */,
 				CDE9B404285109720043B727 /* Assets.xcassets in Resources */,
-				CDE9B402285109700043B727 /* Main.storyboard in Resources */,
+				CDE9B402285109700043B727 /* Garment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +320,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CDE9B400285109700043B727 /* Main.storyboard */ = {
+		CDE9B400285109700043B727 /* Garment.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CDE9B401285109700043B727 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Garment.storyboard;
 			sourceTree = "<group>";
 		};
 		CDE9B405285109720043B727 /* LaunchScreen.storyboard */ = {

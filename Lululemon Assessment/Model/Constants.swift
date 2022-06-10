@@ -10,7 +10,7 @@ import UIKit
 enum K {
     static var storyboard: UIStoryboard {
         let bundle = Bundle(identifier: "com.craftedthoughts.Lululemon-Assessment")
-        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
+        let storyboard = UIStoryboard(name: "Garment", bundle: bundle)
         return storyboard
     }
     
