@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CDAE26DB2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */; };
 		CDAE26DD285295E700CDFC27 /* GarmentOrderingSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DC285295E700CDFC27 /* GarmentOrderingSegmentControl.swift */; };
+		CDAE26DF2852D9C900CDFC27 /* GarmentViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */; };
 		CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FA285109700043B727 /* AppDelegate.swift */; };
 		CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FC285109700043B727 /* SceneDelegate.swift */; };
 		CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FE285109700043B727 /* GarmentViewController.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentOrderingSegmentControlTests.swift; sourceTree = "<group>"; };
 		CDAE26DC285295E700CDFC27 /* GarmentOrderingSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentOrderingSegmentControl.swift; sourceTree = "<group>"; };
+		CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentViewControllerTests.swift; sourceTree = "<group>"; };
 		CDE9B3F7285109700043B727 /* Lululemon Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lululemon Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE9B3FA285109700043B727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE9B3FC285109700043B727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		CDE9B42A2851C9920043B727 /* Integration Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */,
 			);
 			path = "Integration Tests";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				CDAE26DB2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift in Sources */,
 				CDE9B4292851C98D0043B727 /* GarmentViewControllerDataSourceTests.swift in Sources */,
+				CDAE26DF2852D9C900CDFC27 /* GarmentViewControllerTests.swift in Sources */,
 				CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,8 +47,8 @@ class GarmentOrderingSegmentControlTests: XCTestCase {
 }
 
 class GarmentOrderingSegmentControlDelegateMock: GarmentOrderingSegmentControlDelegate {
-    var orderingChangedCalledOnAlphabeticalOrder = false
-    var orderingChangedCalledOnCreationTimeOrder = false
+    private(set) var orderingChangedCalledOnAlphabeticalOrder = false
+    private(set) var orderingChangedCalledOnCreationTimeOrder = false
     
     func orderingChanged(to order: GarmentsListOrder) {
         switch order {

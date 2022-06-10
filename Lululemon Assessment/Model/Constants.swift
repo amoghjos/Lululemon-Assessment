@@ -20,6 +20,7 @@ enum K {
     }
     
     enum SampleData {
-        static let garments = ["Dress","Jeans", "Shirt", "Pant","Tshirt"]
+        static let garments = ["Jeans", "Shirt", "Pant","Tshirt","Dress"]
+        static let garmentsSorted = ["Dress","Jeans","Pant", "Shirt","Tshirt"]
     }
 }
