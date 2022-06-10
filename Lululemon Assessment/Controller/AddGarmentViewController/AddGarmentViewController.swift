@@ -8,7 +8,8 @@
 import UIKit
 
 class AddGarmentViewController: UIViewController {
-
+    @IBOutlet weak var garmentNameTextField: AddGarmentTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

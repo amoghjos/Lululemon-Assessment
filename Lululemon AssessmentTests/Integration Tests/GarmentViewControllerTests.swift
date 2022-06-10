@@ -17,7 +17,7 @@ class GarmentViewControllerTests: XCTestCase {
     var garmentModelController: GarmentModelController!
     
     override func setUpWithError() throws {
-        let vc = K.garmentStoryboard.instantiateViewController(withIdentifier: K.Identifiers.garmentViewController)
+        let vc = K.Storyboard.garmentStoryboard.instantiateViewController(withIdentifier: K.Identifiers.garmentViewController)
         let garmentViewController = try XCTUnwrap(vc as? GarmentViewController)
         garmentViewController.loadViewIfNeeded()
         

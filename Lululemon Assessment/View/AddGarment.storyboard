@@ -12,7 +12,7 @@
         <!--Add Garment-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" userLabel="Add Garment" customClass="AddGarmentViewController" customModule="Lululemon_Assessment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddGarmentViewController" id="Y6W-OH-hqX" userLabel="Add Garment" customClass="AddGarmentViewController" customModule="Lululemon_Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter garment name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAN-e4-SeH" userLabel="Garment Name Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter garment name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAN-e4-SeH" userLabel="Garment Name Text Field" customClass="AddGarmentTextField" customModule="Lululemon_Assessment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="39" width="374" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -54,6 +54,9 @@
                             <color key="tintColor" name="AccentColor"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="garmentNameTextField" destination="uAN-e4-SeH" id="dtF-e1-fb0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
