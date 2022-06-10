@@ -11,7 +11,6 @@ import Foundation
 class GarmentModelController {
     
     //setting storage are private to hide implementation details of the model and making APIs below to allow developer to interact with GarmentModelController
-    #warning("instead of having this as an array, use a computed property which access CoreData to get current garments. In case, set does not work b/c big update is required, do that work in addGarment prob")
     private var garments = [Garment]()
     
     var totalGarments: Int {
