@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GarmentViewController: UIViewController {
+class GarmentViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var garmentOrderingSegmentControl: GarmentOrderingSegmentControl!
     
@@ -16,14 +16,15 @@ class GarmentViewController: UIViewController {
     
     var dataSource: GarmentViewControllerDataSource!
     
+    //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpInitialGarments()
+        updateGarments()
         setupTableViewDataSource()
         setUpGarmentOrderingSegmentControlDelegate()
     }
     
-    private func setUpInitialGarments() {
+    private func updateGarments() {
         let currentSegmentIndex = garmentOrderingSegmentControl.selectedSegmentIndex
         let currentOrdering = GarmentsListOrder.getOrdering(from: currentSegmentIndex)
         garments = garmentModelController.getGarments(by: currentOrdering)
@@ -38,14 +39,41 @@ class GarmentViewController: UIViewController {
         garmentOrderingSegmentControl.delegate = self
         garmentOrderingSegmentControl.setUpTargetAction()
     }
+    
+    //MARK:- Add Garment Button
+    @IBAction func addGarmentButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: K.Segues.goToAddGarmentViewController, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case K.Segues.goToAddGarmentViewController:
+            guard let destinationVC = segue.destination as? UINavigationController else { return }
+            guard let addGarmentVC = destinationVC.topViewController as? AddGarmentViewController else { return }
+            addGarmentVC.delegate = self
+        default:
+            return
+        }
+    }
 }
 
+//MARK:- Protocol Confirmation
 extension GarmentViewController: GarmentViewControllerDataSourceDelegate {
 }
 
 extension GarmentViewController: GarmentOrderingSegmentControlDelegate {
     func orderingChanged(to order: GarmentsListOrder) {
         garments = garmentModelController.getGarments(by: order)
+        tableView.reloadData()
+    }
+}
+
+extension GarmentViewController: AddGarmentViewControllerDelegate {
+    func garmentAdded(with name: String) {
+        garmentModelController.addGarment(name)
+        updateGarments()
+        
+        //I'm currently using tableView.reload() but it would be more user friendly (and efficient) if we can insert row at an given index so it is an area of improvment :)
         tableView.reloadData()
     }
 }

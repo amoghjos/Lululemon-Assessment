@@ -11,7 +11,7 @@ class GarmentOrderingSegmentControl: UISegmentedControl {
     
     weak var delegate: GarmentOrderingSegmentControlDelegate?
     
-    //I kept running into issues when trying to create custom designated intializers so I'm using seperate function for target action setup for now, but in future, we should consider removing this technical debt after doing some more research
+    //I kept running into issues when trying to create custom designated intializers so I'm using seperate function for target action setup for now, but in future, we should consider removing this technical debt after doing some more research so our tests can be further refactored
     func setUpTargetAction() {
         addTarget(self, action: #selector(segmentedValueChanged), for: .valueChanged)
     }

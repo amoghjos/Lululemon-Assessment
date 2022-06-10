@@ -17,7 +17,7 @@ class GarmentViewControllerTests: XCTestCase {
     var garmentModelController: GarmentModelController!
     
     override func setUpWithError() throws {
-        let vc = K.storyboard.instantiateViewController(withIdentifier: K.Identifiers.garmentViewController)
+        let vc = K.Storyboard.garmentStoryboard.instantiateViewController(withIdentifier: K.Identifiers.garmentViewController)
         let garmentViewController = try XCTUnwrap(vc as? GarmentViewController)
         garmentViewController.loadViewIfNeeded()
         
@@ -61,7 +61,7 @@ class GarmentViewControllerTests: XCTestCase {
         }
         
         //index 0 represent alphabetical segment
-        try testingGarmentsViewControllerWithSomeData(segmentIndex: 0, expectedGarments: K.SampleData.garmentsSorted)
+        try testingGarmentsViewControllerWithSomeData(segmentIndex: 0, expectedGarments: K.SampleData.garmentsSortedAlphabetically)
     }
     
     func test_garment_view_controller_creation_time_order_segment() throws {
