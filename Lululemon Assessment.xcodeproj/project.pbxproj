@@ -100,12 +100,20 @@
 		CDDFE0212853AFE300143583 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				CDDFE0242853B4DD00143583 /* GarmentDataModel.xcdatamodeld */,
-				CDDFE0272853B52E00143583 /* Garment+CoreDataClass.swift */,
-				CDDFE0282853B52E00143583 /* Garment+CoreDataProperties.swift */,
+				CDDFE02B2853B6C600143583 /* GarmentDataModel */,
 				CDDFE0222853B23C00143583 /* PersistenceStorage.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CDDFE02B2853B6C600143583 /* GarmentDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDDFE0242853B4DD00143583 /* GarmentDataModel.xcdatamodeld */,
+				CDDFE0272853B52E00143583 /* Garment+CoreDataClass.swift */,
+				CDDFE0282853B52E00143583 /* Garment+CoreDataProperties.swift */,
+			);
+			path = GarmentDataModel;
 			sourceTree = "<group>";
 		};
 		CDE9B3EE285109700043B727 = {
