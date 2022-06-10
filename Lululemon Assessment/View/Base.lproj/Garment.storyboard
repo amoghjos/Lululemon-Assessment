@@ -63,13 +63,14 @@
                     <navigationItem key="navigationItem" title="List" largeTitleDisplayMode="never" id="j1L-X8-AWH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1y7-dv-RHm">
                             <connections>
-                                <segue destination="Jlc-bR-V3M" kind="presentation" id="kyI-Nw-RSs"/>
+                                <action selector="addGarmentButton:" destination="BYZ-38-t0r" id="EC4-bo-Uyc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="garmentOrderingSegmentControl" destination="0Ma-w6-Ptr" id="g5X-5l-l0s"/>
                         <outlet property="tableView" destination="7vs-Vn-qRx" id="PgF-lQ-OXD"/>
+                        <segue destination="Jlc-bR-V3M" kind="presentation" identifier="GoToAddGarmentViewController" id="4ca-EO-jnO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

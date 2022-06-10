@@ -8,7 +8,7 @@
 import UIKit
 
 enum K {
-    static var storyboard: UIStoryboard {
+    static var garmentStoryboard: UIStoryboard {
         let bundle = Bundle(identifier: "com.craftedthoughts.Lululemon-Assessment")
         let storyboard = UIStoryboard(name: "Garment", bundle: bundle)
         return storyboard
@@ -17,6 +17,10 @@ enum K {
     enum Identifiers {
         static let garmentTableViewCell = "GarmentTableViewCell"
         static let garmentViewController = "GarmentViewController"
+    }
+    
+    enum Segues {
+        static let goToAddGarmentViewController = "GoToAddGarmentViewController"
     }
     
     enum SampleData {

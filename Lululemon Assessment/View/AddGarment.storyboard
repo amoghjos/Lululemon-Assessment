@@ -12,7 +12,7 @@
         <!--Add Garment-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" userLabel="Add Garment" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" userLabel="Add Garment" customClass="AddGarmentViewController" customModule="Lululemon_Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,6 +46,9 @@
                     <navigationItem key="navigationItem" title="Add Garment" id="Y6a-sK-hqV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kIj-mf-QMP">
                             <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="cancelButton:" destination="Y6W-OH-hqX" id="nO9-iy-Shw"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="fwE-zC-u9l">
                             <color key="tintColor" name="AccentColor"/>
