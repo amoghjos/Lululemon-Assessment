@@ -10,6 +10,7 @@
 		CDAE26DB2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */; };
 		CDAE26DD285295E700CDFC27 /* GarmentOrderingSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DC285295E700CDFC27 /* GarmentOrderingSegmentControl.swift */; };
 		CDAE26DF2852D9C900CDFC27 /* GarmentViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */; };
+		CDAE26E12852F6F000CDFC27 /* AddGarment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAE26E02852F6F000CDFC27 /* AddGarment.storyboard */; };
 		CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FA285109700043B727 /* AppDelegate.swift */; };
 		CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FC285109700043B727 /* SceneDelegate.swift */; };
 		CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FE285109700043B727 /* GarmentViewController.swift */; };
@@ -38,6 +39,7 @@
 		CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentOrderingSegmentControlTests.swift; sourceTree = "<group>"; };
 		CDAE26DC285295E700CDFC27 /* GarmentOrderingSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentOrderingSegmentControl.swift; sourceTree = "<group>"; };
 		CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentViewControllerTests.swift; sourceTree = "<group>"; };
+		CDAE26E02852F6F000CDFC27 /* AddGarment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddGarment.storyboard; sourceTree = "<group>"; };
 		CDE9B3F7285109700043B727 /* Lululemon Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lululemon Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE9B3FA285109700043B727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE9B3FC285109700043B727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE9B400285109700043B727 /* Garment.storyboard */,
+				CDAE26E02852F6F000CDFC27 /* AddGarment.storyboard */,
 				CDE9B405285109720043B727 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -270,6 +273,7 @@
 				CDE9B407285109720043B727 /* LaunchScreen.storyboard in Resources */,
 				CDE9B404285109720043B727 /* Assets.xcassets in Resources */,
 				CDE9B402285109700043B727 /* Garment.storyboard in Resources */,
+				CDAE26E12852F6F000CDFC27 /* AddGarment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
