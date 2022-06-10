@@ -17,6 +17,7 @@
 		CDDFE0262853B4DD00143583 /* GarmentDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDDFE0242853B4DD00143583 /* GarmentDataModel.xcdatamodeld */; };
 		CDDFE0292853B52E00143583 /* Garment+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFE0272853B52E00143583 /* Garment+CoreDataClass.swift */; };
 		CDDFE02A2853B52E00143583 /* Garment+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFE0282853B52E00143583 /* Garment+CoreDataProperties.swift */; };
+		CDDFE02D2853C0AF00143583 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDDFE02C2853C0AF00143583 /* README.md */; };
 		CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FA285109700043B727 /* AppDelegate.swift */; };
 		CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FC285109700043B727 /* SceneDelegate.swift */; };
 		CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FE285109700043B727 /* GarmentViewController.swift */; };
@@ -52,6 +53,7 @@
 		CDDFE0252853B4DD00143583 /* GarmentDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GarmentDataModel.xcdatamodel; sourceTree = "<group>"; };
 		CDDFE0272853B52E00143583 /* Garment+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Garment+CoreDataClass.swift"; sourceTree = "<group>"; };
 		CDDFE0282853B52E00143583 /* Garment+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Garment+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CDDFE02C2853C0AF00143583 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CDE9B3F7285109700043B727 /* Lululemon Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lululemon Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE9B3FA285109700043B727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE9B3FC285109700043B727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		CDE9B3EE285109700043B727 = {
 			isa = PBXGroup;
 			children = (
+				CDDFE02C2853C0AF00143583 /* README.md */,
 				CDE9B3F9285109700043B727 /* Lululemon Assessment */,
 				CDE9B41328510ADA0043B727 /* Lululemon AssessmentTests */,
 				CDE9B3F8285109700043B727 /* Products */,
@@ -314,6 +317,7 @@
 			files = (
 				CDE9B407285109720043B727 /* LaunchScreen.storyboard in Resources */,
 				CDE9B404285109720043B727 /* Assets.xcassets in Resources */,
+				CDDFE02D2853C0AF00143583 /* README.md in Resources */,
 				CDE9B402285109700043B727 /* Garment.storyboard in Resources */,
 				CDAE26E12852F6F000CDFC27 /* AddGarment.storyboard in Resources */,
 			);
