@@ -32,7 +32,6 @@ class AddGarmentViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         dismiss(animated: true)
     }

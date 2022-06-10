@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GarmentViewController: UIViewController {
+class GarmentViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var garmentOrderingSegmentControl: GarmentOrderingSegmentControl!
     
@@ -19,12 +19,12 @@ class GarmentViewController: UIViewController {
     //MARK:- View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpInitialGarments()
+        updateGarments()
         setupTableViewDataSource()
         setUpGarmentOrderingSegmentControlDelegate()
     }
     
-    private func setUpInitialGarments() {
+    private func updateGarments() {
         let currentSegmentIndex = garmentOrderingSegmentControl.selectedSegmentIndex
         let currentOrdering = GarmentsListOrder.getOrdering(from: currentSegmentIndex)
         garments = garmentModelController.getGarments(by: currentOrdering)
@@ -45,13 +45,12 @@ class GarmentViewController: UIViewController {
         performSegue(withIdentifier: K.Segues.goToAddGarmentViewController, sender: self)
     }
     
-    #warning("this code wasn't yet needed but it is mostly needed for adding delegate which isn't ready yet so once that is done assign it here and remove this warning :)")
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case K.Segues.goToAddGarmentViewController:
-            let vc = segue.destination
-            guard let addGarmentViewController = vc as? AddGarmentViewController else { return }
-            
+            guard let destinationVC = segue.destination as? UINavigationController else { return }
+            guard let addGarmentVC = destinationVC.topViewController as? AddGarmentViewController else { return }
+            addGarmentVC.delegate = self
         default:
             return
         }
@@ -65,6 +64,14 @@ extension GarmentViewController: GarmentViewControllerDataSourceDelegate {
 extension GarmentViewController: GarmentOrderingSegmentControlDelegate {
     func orderingChanged(to order: GarmentsListOrder) {
         garments = garmentModelController.getGarments(by: order)
+        tableView.reloadData()
+    }
+}
+
+extension GarmentViewController: AddGarmentViewControllerDelegate {
+    func garmentAdded(with name: String) {
+        garmentModelController.addGarment(name)
+        updateGarments()
         tableView.reloadData()
     }
 }
