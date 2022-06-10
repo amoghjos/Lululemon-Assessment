@@ -13,6 +13,7 @@
 		CDAE26E12852F6F000CDFC27 /* AddGarment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAE26E02852F6F000CDFC27 /* AddGarment.storyboard */; };
 		CDAE26E3285312D500CDFC27 /* AddGarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26E2285312D500CDFC27 /* AddGarmentViewController.swift */; };
 		CDAE26EC2853260B00CDFC27 /* AddGarmentLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26EB2853260B00CDFC27 /* AddGarmentLogicController.swift */; };
+		CDDFE0202853A69300143583 /* Garment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFE01F2853A69300143583 /* Garment.swift */; };
 		CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FA285109700043B727 /* AppDelegate.swift */; };
 		CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FC285109700043B727 /* SceneDelegate.swift */; };
 		CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE9B3FE285109700043B727 /* GarmentViewController.swift */; };
@@ -44,6 +45,7 @@
 		CDAE26E02852F6F000CDFC27 /* AddGarment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddGarment.storyboard; sourceTree = "<group>"; };
 		CDAE26E2285312D500CDFC27 /* AddGarmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentViewController.swift; sourceTree = "<group>"; };
 		CDAE26EB2853260B00CDFC27 /* AddGarmentLogicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentLogicController.swift; sourceTree = "<group>"; };
+		CDDFE01F2853A69300143583 /* Garment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garment.swift; sourceTree = "<group>"; };
 		CDE9B3F7285109700043B727 /* Lululemon Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lululemon Assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDE9B3FA285109700043B727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDE9B3FC285109700043B727 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,8 +172,9 @@
 		CDE9B4242851539F0043B727 /* GarmentModel */ = {
 			isa = PBXGroup;
 			children = (
-				CDE9B42228514EEE0043B727 /* GarmentModelController.swift */,
+				CDDFE01F2853A69300143583 /* Garment.swift */,
 				CDE9B425285155450043B727 /* GarmentsListOrder.swift */,
+				CDE9B42228514EEE0043B727 /* GarmentModelController.swift */,
 			);
 			path = GarmentModel;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				CDAE26E3285312D500CDFC27 /* AddGarmentViewController.swift in Sources */,
 				CDAE26DD285295E700CDFC27 /* GarmentOrderingSegmentControl.swift in Sources */,
 				CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */,
+				CDDFE0202853A69300143583 /* Garment.swift in Sources */,
 				CDAE26EC2853260B00CDFC27 /* AddGarmentLogicController.swift in Sources */,
 				CDE9B426285155450043B727 /* GarmentsListOrder.swift in Sources */,
 				CDE9B42D2851CC8E0043B727 /* GarmentViewControllerDataSource.swift in Sources */,
