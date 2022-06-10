@@ -61,7 +61,7 @@ class GarmentViewControllerTests: XCTestCase {
         }
         
         //index 0 represent alphabetical segment
-        try testingGarmentsViewControllerWithSomeData(segmentIndex: 0, expectedGarments: K.SampleData.garmentsSorted)
+        try testingGarmentsViewControllerWithSomeData(segmentIndex: 0, expectedGarments: K.SampleData.garmentsSortedAlphabetically)
     }
     
     func test_garment_view_controller_creation_time_order_segment() throws {
