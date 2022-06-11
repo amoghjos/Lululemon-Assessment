@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD940CC9285414B4006196BD /* PersistenceStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD940CC8285414B4006196BD /* PersistenceStorageMock.swift */; };
 		CDAE26DB2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */; };
 		CDAE26DD285295E700CDFC27 /* GarmentOrderingSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DC285295E700CDFC27 /* GarmentOrderingSegmentControl.swift */; };
 		CDAE26DF2852D9C900CDFC27 /* GarmentViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD940CC8285414B4006196BD /* PersistenceStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStorageMock.swift; sourceTree = "<group>"; };
 		CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentOrderingSegmentControlTests.swift; sourceTree = "<group>"; };
 		CDAE26DC285295E700CDFC27 /* GarmentOrderingSegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentOrderingSegmentControl.swift; sourceTree = "<group>"; };
 		CDAE26DE2852D9C900CDFC27 /* GarmentViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentViewControllerTests.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		CDDFE0B52854139200143583 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CD940CC8285414B4006196BD /* PersistenceStorageMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		CDE9B3EE285109700043B727 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		CDE9B41328510ADA0043B727 /* Lululemon AssessmentTests */ = {
 			isa = PBXGroup;
 			children = (
+				CDDFE0B52854139200143583 /* Mocks */,
 				CDE9B4272851C9620043B727 /* Unit Tests */,
 				CDE9B42A2851C9920043B727 /* Integration Tests */,
 				CDE9B41628510ADA0043B727 /* Info.plist */,
@@ -360,6 +371,7 @@
 			files = (
 				CDAE26DB2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift in Sources */,
 				CDE9B4292851C98D0043B727 /* GarmentViewControllerDataSourceTests.swift in Sources */,
+				CD940CC9285414B4006196BD /* PersistenceStorageMock.swift in Sources */,
 				CDAE26DF2852D9C900CDFC27 /* GarmentViewControllerTests.swift in Sources */,
 				CDE9B41528510ADA0043B727 /* GarmentModelControllerTests.swift in Sources */,
 			);
