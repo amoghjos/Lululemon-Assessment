@@ -99,15 +99,6 @@
 			path = AddGarmentViewController;
 			sourceTree = "<group>";
 		};
-		CDDFE0212853AFE300143583 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				CDDFE02B2853B6C600143583 /* GarmentDataModel */,
-				CDDFE0222853B23C00143583 /* PersistenceStorage.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		CDDFE02B2853B6C600143583 /* GarmentDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +107,15 @@
 				CDDFE0282853B52E00143583 /* Garment+CoreDataProperties.swift */,
 			);
 			path = GarmentDataModel;
+			sourceTree = "<group>";
+		};
+		CDDFE0B42854112E00143583 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CDDFE02B2853B6C600143583 /* GarmentDataModel */,
+				CDDFE0222853B23C00143583 /* PersistenceStorage.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		CDE9B3EE285109700043B727 = {
@@ -192,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				CDE9B41F285112F00043B727 /* Constants.swift */,
-				CDDFE0212853AFE300143583 /* CoreData */,
+				CDDFE0B42854112E00143583 /* CoreData */,
 				CDE9B4242851539F0043B727 /* GarmentModel */,
 			);
 			path = Model;
@@ -201,8 +201,8 @@
 		CDE9B4242851539F0043B727 /* GarmentModel */ = {
 			isa = PBXGroup;
 			children = (
-				CDE9B425285155450043B727 /* GarmentsListOrder.swift */,
 				CDE9B42228514EEE0043B727 /* GarmentModelController.swift */,
+				CDE9B425285155450043B727 /* GarmentsListOrder.swift */,
 			);
 			path = GarmentModel;
 			sourceTree = "<group>";

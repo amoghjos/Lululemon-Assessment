@@ -10,16 +10,23 @@ import Foundation
 //Inspiration: https://www.swiftbysundell.com/articles/model-controllers-in-swift/
 class GarmentModelController {
     
+    let persistenceStorage: PersistenceStorage
+    
+    //used dependency injection below to get modularity and easy mocking testing
+    init(persistenceStorage: PersistenceStorage = PersistenceStorage()){
+        self.persistenceStorage = persistenceStorage
+    }
+    
     var totalGarments: Int {
-        return PersistenceStorage.getGarments().count
+        return persistenceStorage.getGarments().count
     }
     
     func addGarment(_ garmentName: String){
-        PersistenceStorage.addGarment(garmentName)
+        persistenceStorage.addGarment(garmentName)
     }
     
     func getGarments(by order: GarmentsListOrder = .alphabetical) -> [String] {
-        let garments = PersistenceStorage.getGarments()
+        let garments = persistenceStorage.getGarments()
         return garments
             .filter({
                 $0.name != nil && $0.creationTime != nil

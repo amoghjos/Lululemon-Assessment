@@ -11,19 +11,16 @@ import CoreData
 //PersistenceStorage is implemented using CoreData and it only exposes 2 APIs to allows other models to interact with it while rest of the implementation details are kept hidden
 //Citation: https://www.youtube.com/watch?v=tP4OGvIRUC4
 
-struct PersistenceStorage {
+class PersistenceStorage {
     
-    //I'm using private init and static methods below to ensure we have a single instance PersistenceStorage
-    private init() {}
-    
-    static func addGarment(_ name: String){
+    func addGarment(_ name: String){
         let garment = Garment(context: persistentContainer.viewContext)
         garment.name = name
         garment.creationTime = Date()
         saveContext()
     }
     
-    static func getGarments() -> [Garment] {
+    func getGarments() -> [Garment] {
         let fetchRequest: NSFetchRequest<Garment> = Garment.fetchRequest()
         var garments = [Garment]()
         
@@ -36,7 +33,7 @@ struct PersistenceStorage {
         return garments
     }
     
-    static private var persistentContainer: NSPersistentContainer = {
+    private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: K.DataModel.garmentDataModel)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -46,10 +43,8 @@ struct PersistenceStorage {
         })
         return container
     }()
-    
-    // MARK: - Core Data Saving support
-    
-    static private func saveContext () {
+        
+    private func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
