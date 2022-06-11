@@ -1,5 +1,5 @@
 # Lululemon-Assessment
-This is the take home project from Lululemon for the role of iOS Software Engineer. The project has been completed :)
+The project has been completed. Please check below sections for more details :)
 
 ## Challenge
 
