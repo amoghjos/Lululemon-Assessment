@@ -27,11 +27,17 @@ Ideally, I would clarify these requirements with Product Owner but I made these 
 
 I'm using MVC design pattern and please check the above image to understand how different units of the code are interacting. I used various techniques such as dependancy injection, logic controllers, model controllers, and many others to ensure that different units of the codebase are loosely coupled and have an overall modular design.
 
-The above artitecture does not cover small units like GarmentsListOrder and StorageProtocol but it should give a good idea. You can check the draw.io diagram at https://drive.google.com/file/d/1Wc6uqTfI_9wK1pkGfYhASp-ULXBRbJhb/view?usp=sharing
+The above artitecture does not cover small units like `GarmentsListOrder` and `StorageProtocol` but it should give a good idea. You can check the draw.io diagram at https://drive.google.com/file/d/1Wc6uqTfI_9wK1pkGfYhASp-ULXBRbJhb/view?usp=sharing
 
 ## Demo
 
 Here is a screen recording of the app: 
+
+## Additional Features
+
+- Support light/dark mode
+- Supports landscape/portrait orientation
+- Supports iPhone/iPad
 
 ## Testing
 
@@ -39,4 +45,4 @@ I followed Test Driven Development while making this project. Please check Lulul
 
 ## Improvements
 
-- I have left various comments noting some of the techincal debt in the project. Please check the individual comments for more information. 
+I have left various comments noting some of the techincal debt in the project. Please check the individual comments for more information. 
