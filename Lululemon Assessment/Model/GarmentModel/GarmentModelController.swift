@@ -10,11 +10,11 @@ import Foundation
 //Inspiration: https://www.swiftbysundell.com/articles/model-controllers-in-swift/
 class GarmentModelController {
     
-    let storage: StorageProtocol
+    var storage: StorageProtocol
     
     //used dependency injection below to get modularity and easy mocking testing
-    init(persistenceStorage: StorageProtocol = PersistenceStorage()){
-        self.storage = persistenceStorage
+    init(storage: StorageProtocol = PersistenceStorage()){
+        self.storage = storage
     }
     
     var totalGarments: Int {

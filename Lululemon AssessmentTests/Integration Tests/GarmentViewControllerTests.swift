@@ -24,7 +24,10 @@ class GarmentViewControllerTests: XCTestCase {
         sut = garmentViewController
         tableView = garmentViewController.tableView
         segmentControl = garmentViewController.garmentOrderingSegmentControl
-        garmentModelController = garmentViewController.garmentModelController
+        
+        //mocking storage but we are still using actual GarmentModelController
+        garmentModelController = GarmentModelController(storage: PersistenceStorageMock())
+        garmentViewController.garmentModelController = garmentModelController
     }
     
     override func tearDownWithError() throws {

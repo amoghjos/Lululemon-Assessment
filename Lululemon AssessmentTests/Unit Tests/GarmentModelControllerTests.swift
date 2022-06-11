@@ -14,7 +14,7 @@ class GarmentModelControllerTests: XCTestCase {
     
     override func setUpWithError() throws {
         let mock = PersistenceStorageMock()
-        sut = GarmentModelController(persistenceStorage: mock)
+        sut = GarmentModelController(storage: mock)
     }
     
     override func tearDownWithError() throws {
