@@ -31,7 +31,7 @@ The above artitecture does not cover small units like `GarmentsListOrder` and `S
 
 ## Demo
 
-Here is a screen recording of the app: 
+Here is a screen recording of the app: https://youtube.com/shorts/55hRQjnfvJg?feature=share
 
 ## Additional Features
 
