@@ -10,30 +10,34 @@ import Foundation
 //Inspiration: https://www.swiftbysundell.com/articles/model-controllers-in-swift/
 class GarmentModelController {
     
+    var storage: StorageProtocol
+    
+    //used dependency injection below to get modularity and easy mocking testing
+    init(storage: StorageProtocol = PersistenceStorage()){
+        self.storage = storage
+    }
+    
     var totalGarments: Int {
-        return PersistenceStorage.getGarments().count
+        return storage.getGarments().count
     }
     
     func addGarment(_ garmentName: String){
-        PersistenceStorage.addGarment(garmentName)
+        storage.addGarment(garmentName)
     }
     
     func getGarments(by order: GarmentsListOrder = .alphabetical) -> [String] {
-        let garments = PersistenceStorage.getGarments()
+        let garments = storage.getGarments()
         return garments
-            .filter({
-                $0.name != nil && $0.creationTime != nil
-            })
             .sorted {
                 switch order {
                 case .creationTime:
-                    return $0.creationTime! > $0.creationTime! //decending order: latest garments first
+                    return $0.creationTime > $0.creationTime //decending order: latest garments first
                 case .alphabetical:
-                    return $0.name!.lowercased() < $1.name!.lowercased() //ascending order
+                    return $0.name.lowercased() < $1.name.lowercased() //ascending order
                 }
             }
             .map {
-                $0.name!
+                $0.name
             }
     }
 }

@@ -8,7 +8,8 @@
 import XCTest
 @testable import Lululemon_Assessment
 
-// GarmentViewControllerTests are integration tests because GarmentViewController combines various units like GarmentModelController, DataSource, and Segment Control to function together as a whole
+// GarmentViewControllerTests are integration tests because GarmentViewController combines various units like GarmentModelController, DataSource, and Segment Control to function together as a whole.
+
 class GarmentViewControllerTests: XCTestCase {
     
     var sut: GarmentViewController!
@@ -19,12 +20,16 @@ class GarmentViewControllerTests: XCTestCase {
     override func setUpWithError() throws {
         let vc = K.Storyboard.garmentStoryboard.instantiateViewController(withIdentifier: K.Identifiers.garmentViewController)
         let garmentViewController = try XCTUnwrap(vc as? GarmentViewController)
+        
+        //mocking storage but we are still using actual GarmentModelController
+        garmentModelController = GarmentModelController(storage: PersistenceStorageMock())
+        garmentViewController.garmentModelController = garmentModelController
+        
         garmentViewController.loadViewIfNeeded()
         
         sut = garmentViewController
         tableView = garmentViewController.tableView
         segmentControl = garmentViewController.garmentOrderingSegmentControl
-        garmentModelController = garmentViewController.garmentModelController
     }
     
     override func tearDownWithError() throws {

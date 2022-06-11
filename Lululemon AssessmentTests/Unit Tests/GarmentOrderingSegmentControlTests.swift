@@ -45,17 +45,3 @@ class GarmentOrderingSegmentControlTests: XCTestCase {
         XCTAssertTrue(mockedDelegate.orderingChangedCalledOnCreationTimeOrder)
     }
 }
-
-class GarmentOrderingSegmentControlDelegateMock: GarmentOrderingSegmentControlDelegate {
-    private(set) var orderingChangedCalledOnAlphabeticalOrder = false
-    private(set) var orderingChangedCalledOnCreationTimeOrder = false
-    
-    func orderingChanged(to order: GarmentsListOrder) {
-        switch order {
-        case .alphabetical:
-            orderingChangedCalledOnAlphabeticalOrder = true
-        case .creationTime:
-            orderingChangedCalledOnCreationTimeOrder = true
-        }
-    }
-}

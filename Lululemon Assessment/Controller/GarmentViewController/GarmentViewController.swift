@@ -16,7 +16,7 @@ class GarmentViewController: UIViewController, UINavigationControllerDelegate {
     
     var dataSource: GarmentViewControllerDataSource!
     
-    //MARK:- View Did Load
+    //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         updateGarments()
@@ -40,7 +40,7 @@ class GarmentViewController: UIViewController, UINavigationControllerDelegate {
         garmentOrderingSegmentControl.setUpTargetAction()
     }
     
-    //MARK:- Add Garment Button
+    //MARK: Add Garment Button
     @IBAction func addGarmentButton(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: K.Segues.goToAddGarmentViewController, sender: self)
     }
@@ -57,7 +57,7 @@ class GarmentViewController: UIViewController, UINavigationControllerDelegate {
     }
 }
 
-//MARK:- Protocol Confirmation
+//MARK: Protocol Confirmation
 extension GarmentViewController: GarmentViewControllerDataSourceDelegate {
 }
 
@@ -75,5 +75,12 @@ extension GarmentViewController: AddGarmentViewControllerDelegate {
         
         //I'm currently using tableView.reload() but it would be more user friendly (and efficient) if we can insert row at an given index so it is an area of improvment :)
         tableView.reloadData()
+    }
+}
+
+//MARK: Table View Delegate
+extension GarmentViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

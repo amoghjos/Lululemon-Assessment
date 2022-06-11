@@ -11,45 +11,41 @@ import CoreData
 //PersistenceStorage is implemented using CoreData and it only exposes 2 APIs to allows other models to interact with it while rest of the implementation details are kept hidden
 //Citation: https://www.youtube.com/watch?v=tP4OGvIRUC4
 
-struct PersistenceStorage {
+class PersistenceStorage: StorageProtocol {
     
-    //I'm using private init and static methods below to ensure we have a single instance PersistenceStorage
-    private init() {}
-    
-    static func addGarment(_ name: String){
-        let garment = Garment(context: persistentContainer.viewContext)
-        garment.name = name
-        garment.creationTime = Date()
+    func addGarment(_ name: String){
+        let garmentData = GarmentData(context: persistentContainer.viewContext)
+        garmentData.name = name
+        garmentData.creationTime = Date()
         saveContext()
     }
     
-    static func getGarments() -> [Garment] {
-        let fetchRequest: NSFetchRequest<Garment> = Garment.fetchRequest()
-        var garments = [Garment]()
+    //getGarments outputs Garment model instead of CoreData's GarmentData model to keep CoreData and PersistenceStorage seperate modules (losely coupled)
+    func getGarments() -> [Garment] {
+        let fetchRequest: NSFetchRequest<GarmentData> = GarmentData.fetchRequest()
+        var garments = [GarmentData]()
         
         do {
             garments = try persistentContainer.viewContext.fetch(fetchRequest)
         } catch {
-            //I'm currently not handling errors because CoreData was the last module I worked on and I can't spend more time but this is def tech debt which needs to be addressed in future
             print(error)
         }
-        return garments
+        return garments.map {
+                Garment(name: $0.name!, creationTime: $0.creationTime!)
+            }
     }
     
-    static private var persistentContainer: NSPersistentContainer = {
+    private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: K.DataModel.garmentDataModel)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                //I'm currently not handling errors because CoreData was the last module I worked on and I can't spend more time but this is def tech debt which needs to be addressed in future
                 print("Unresolved error \(error), \(error.userInfo)")
             }
         })
         return container
     }()
-    
-    // MARK: - Core Data Saving support
-    
-    static private func saveContext () {
+        
+    private func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
