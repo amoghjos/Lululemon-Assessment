@@ -21,7 +21,8 @@ Ideally, I would clarify these requirements with Product Owner but I made these 
 - Uppercase and lowercase does not impact alphabetical order of garments
 - We can't tap on existing garments to edit or delete garment
 
-## Artitecture
+## Architecture
+
 
 ![MVC](https://i.ibb.co/dm7MyKf/Screenshot-2022-06-10-at-10-46-51-PM.png)
 
