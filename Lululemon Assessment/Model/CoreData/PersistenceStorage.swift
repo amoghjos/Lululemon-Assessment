@@ -11,12 +11,12 @@ import CoreData
 //PersistenceStorage is implemented using CoreData and it only exposes 2 APIs to allows other models to interact with it while rest of the implementation details are kept hidden
 //Citation: https://www.youtube.com/watch?v=tP4OGvIRUC4
 
-class PersistenceStorage {
+class PersistenceStorage: StorageProtocol {
     
     func addGarment(_ name: String){
-        let garment = GarmentData(context: persistentContainer.viewContext)
-        garment.name = name
-        garment.creationTime = Date()
+        let garmentData = GarmentData(context: persistentContainer.viewContext)
+        garmentData.name = name
+        garmentData.creationTime = Date()
         saveContext()
     }
     
@@ -31,7 +31,7 @@ class PersistenceStorage {
             print(error)
         }
         return garments.map {
-                Garment(name: $0.name, creationTime: $0.creationTime)
+                Garment(name: $0.name!, creationTime: $0.creationTime!)
             }
     }
     

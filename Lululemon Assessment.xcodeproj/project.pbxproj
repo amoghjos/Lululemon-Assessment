@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD8382E028541B29009137E3 /* GarmentDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD8382DE28541B29009137E3 /* GarmentDataModel.xcdatamodeld */; };
-		CD8382E328541B71009137E3 /* GarmentData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8382E128541B71009137E3 /* GarmentData+CoreDataClass.swift */; };
-		CD8382E428541B71009137E3 /* GarmentData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8382E228541B71009137E3 /* GarmentData+CoreDataProperties.swift */; };
+		CD8382E628541E5B009137E3 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8382E528541E5B009137E3 /* StorageProtocol.swift */; };
+		CD8382ED28541FD4009137E3 /* GarmentDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD8382EB28541FD4009137E3 /* GarmentDataModel.xcdatamodeld */; };
+		CD8382F028542007009137E3 /* GarmentData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8382EE28542007009137E3 /* GarmentData+CoreDataClass.swift */; };
+		CD8382F128542007009137E3 /* GarmentData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8382EF28542007009137E3 /* GarmentData+CoreDataProperties.swift */; };
 		CD940CC9285414B4006196BD /* PersistenceStorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD940CC8285414B4006196BD /* PersistenceStorageMock.swift */; };
 		CD940CCF28541916006196BD /* Garment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD940CCE28541916006196BD /* Garment.swift */; };
 		CDAE26DB2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */; };
@@ -45,9 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD8382DF28541B29009137E3 /* GarmentDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GarmentDataModel.xcdatamodel; sourceTree = "<group>"; };
-		CD8382E128541B71009137E3 /* GarmentData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GarmentData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		CD8382E228541B71009137E3 /* GarmentData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GarmentData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CD8382E528541E5B009137E3 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
+		CD8382EC28541FD4009137E3 /* GarmentDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GarmentDataModel.xcdatamodel; sourceTree = "<group>"; };
+		CD8382EE28542007009137E3 /* GarmentData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GarmentData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CD8382EF28542007009137E3 /* GarmentData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GarmentData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CD940CC8285414B4006196BD /* PersistenceStorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceStorageMock.swift; sourceTree = "<group>"; };
 		CD940CCE28541916006196BD /* Garment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garment.swift; sourceTree = "<group>"; };
 		CDAE26DA2852952F00CDFC27 /* GarmentOrderingSegmentControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentOrderingSegmentControlTests.swift; sourceTree = "<group>"; };
@@ -106,9 +108,9 @@
 		CDDFE02B2853B6C600143583 /* GarmentDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				CD8382DE28541B29009137E3 /* GarmentDataModel.xcdatamodeld */,
-				CD8382E128541B71009137E3 /* GarmentData+CoreDataClass.swift */,
-				CD8382E228541B71009137E3 /* GarmentData+CoreDataProperties.swift */,
+				CD8382EE28542007009137E3 /* GarmentData+CoreDataClass.swift */,
+				CD8382EF28542007009137E3 /* GarmentData+CoreDataProperties.swift */,
+				CD8382EB28541FD4009137E3 /* GarmentDataModel.xcdatamodeld */,
 			);
 			path = GarmentDataModel;
 			sourceTree = "<group>";
@@ -217,6 +219,7 @@
 			children = (
 				CDE9B42228514EEE0043B727 /* GarmentModelController.swift */,
 				CDE9B425285155450043B727 /* GarmentsListOrder.swift */,
+				CD8382E528541E5B009137E3 /* StorageProtocol.swift */,
 			);
 			path = GarmentModel;
 			sourceTree = "<group>";
@@ -351,20 +354,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8382E428541B71009137E3 /* GarmentData+CoreDataProperties.swift in Sources */,
+				CD8382F028542007009137E3 /* GarmentData+CoreDataClass.swift in Sources */,
 				CDE9B3FF285109700043B727 /* GarmentViewController.swift in Sources */,
+				CD8382F128542007009137E3 /* GarmentData+CoreDataProperties.swift in Sources */,
 				CDE9B42328514EEE0043B727 /* GarmentModelController.swift in Sources */,
 				CD940CCF28541916006196BD /* Garment.swift in Sources */,
 				CDAE26E3285312D500CDFC27 /* AddGarmentViewController.swift in Sources */,
-				CD8382E028541B29009137E3 /* GarmentDataModel.xcdatamodeld in Sources */,
+				CD8382ED28541FD4009137E3 /* GarmentDataModel.xcdatamodeld in Sources */,
 				CDAE26DD285295E700CDFC27 /* GarmentOrderingSegmentControl.swift in Sources */,
+				CD8382E628541E5B009137E3 /* StorageProtocol.swift in Sources */,
 				CDE9B3FB285109700043B727 /* AppDelegate.swift in Sources */,
 				CDDFE0232853B23C00143583 /* PersistenceStorage.swift in Sources */,
 				CDAE26EC2853260B00CDFC27 /* AddGarmentLogicController.swift in Sources */,
 				CDE9B426285155450043B727 /* GarmentsListOrder.swift in Sources */,
 				CDE9B42D2851CC8E0043B727 /* GarmentViewControllerDataSource.swift in Sources */,
 				CDE9B3FD285109700043B727 /* SceneDelegate.swift in Sources */,
-				CD8382E328541B71009137E3 /* GarmentData+CoreDataClass.swift in Sources */,
 				CDE9B420285112F00043B727 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,12 +642,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CD8382DE28541B29009137E3 /* GarmentDataModel.xcdatamodeld */ = {
+		CD8382EB28541FD4009137E3 /* GarmentDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CD8382DF28541B29009137E3 /* GarmentDataModel.xcdatamodel */,
+				CD8382EC28541FD4009137E3 /* GarmentDataModel.xcdatamodel */,
 			);
-			currentVersion = CD8382DF28541B29009137E3 /* GarmentDataModel.xcdatamodel */;
+			currentVersion = CD8382EC28541FD4009137E3 /* GarmentDataModel.xcdatamodel */;
 			path = GarmentDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

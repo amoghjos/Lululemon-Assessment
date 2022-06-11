@@ -16,8 +16,8 @@ extension GarmentData {
         return NSFetchRequest<GarmentData>(entityName: "GarmentData")
     }
 
-    @NSManaged public var name: String
-    @NSManaged public var creationTime: Date
+    @NSManaged public var name: String?
+    @NSManaged public var creationTime: Date?
 
 }
 
