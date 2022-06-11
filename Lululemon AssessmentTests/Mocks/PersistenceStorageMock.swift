@@ -9,11 +9,15 @@ import Foundation
 @testable import Lululemon_Assessment
 
 ///PersistenceStorageMock is actually a temporary storage of Garments which is to be used for testing data source and models which depends on storage of garments
+
+
+
 class PersistenceStorageMock: PersistenceStorage {
-    var garments = [Garment]()
+    private var garments = [Garment]()
     
     override func addGarment(_ name: String) {
-        garments.append(contentsOf: garments)
+        let garment = Garment(name: name, creationTime: Date())
+        garments.append(garment)
     }
     
     override func getGarments() -> [Garment] {

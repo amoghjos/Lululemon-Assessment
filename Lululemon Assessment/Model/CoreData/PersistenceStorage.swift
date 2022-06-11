@@ -14,30 +14,31 @@ import CoreData
 class PersistenceStorage {
     
     func addGarment(_ name: String){
-        let garment = Garment(context: persistentContainer.viewContext)
+        let garment = GarmentData(context: persistentContainer.viewContext)
         garment.name = name
         garment.creationTime = Date()
         saveContext()
     }
     
+    //getGarments outputs Garment model instead of CoreData's GarmentData model to keep CoreData and PersistenceStorage seperate modules (losely coupled)
     func getGarments() -> [Garment] {
-        let fetchRequest: NSFetchRequest<Garment> = Garment.fetchRequest()
-        var garments = [Garment]()
+        let fetchRequest: NSFetchRequest<GarmentData> = GarmentData.fetchRequest()
+        var garments = [GarmentData]()
         
         do {
             garments = try persistentContainer.viewContext.fetch(fetchRequest)
         } catch {
-            //I'm currently not handling errors because CoreData was the last module I worked on and I can't spend more time but this is def tech debt which needs to be addressed in future
             print(error)
         }
-        return garments
+        return garments.map {
+                Garment(name: $0.name, creationTime: $0.creationTime)
+            }
     }
     
     private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: K.DataModel.garmentDataModel)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                //I'm currently not handling errors because CoreData was the last module I worked on and I can't spend more time but this is def tech debt which needs to be addressed in future
                 print("Unresolved error \(error), \(error.userInfo)")
             }
         })

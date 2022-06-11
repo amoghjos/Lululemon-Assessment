@@ -28,19 +28,16 @@ class GarmentModelController {
     func getGarments(by order: GarmentsListOrder = .alphabetical) -> [String] {
         let garments = persistenceStorage.getGarments()
         return garments
-            .filter({
-                $0.name != nil && $0.creationTime != nil
-            })
             .sorted {
                 switch order {
                 case .creationTime:
-                    return $0.creationTime! > $0.creationTime! //decending order: latest garments first
+                    return $0.creationTime > $0.creationTime //decending order: latest garments first
                 case .alphabetical:
-                    return $0.name!.lowercased() < $1.name!.lowercased() //ascending order
+                    return $0.name.lowercased() < $1.name.lowercased() //ascending order
                 }
             }
             .map {
-                $0.name!
+                $0.name
             }
     }
 }
