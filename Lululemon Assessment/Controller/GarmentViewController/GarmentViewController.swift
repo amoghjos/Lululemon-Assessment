@@ -77,3 +77,10 @@ extension GarmentViewController: AddGarmentViewControllerDelegate {
         tableView.reloadData()
     }
 }
+
+//MARK: Table View Delegate
+extension GarmentViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}

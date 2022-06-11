@@ -59,11 +59,3 @@ class GarmentViewControllerDataSourceTests: XCTestCase {
         }
     }
 }
-
-class GarmentViewControllerDataSourceDelegateStub: GarmentViewControllerDataSourceDelegate {
-    var garments: [String]
-    
-    init(_ garments: [String]) {
-        self.garments = garments
-    }
-}

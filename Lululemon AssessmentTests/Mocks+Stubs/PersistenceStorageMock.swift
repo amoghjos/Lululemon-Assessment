@@ -8,8 +8,7 @@
 import Foundation
 @testable import Lululemon_Assessment
 
-///PersistenceStorageMock is actually a temporary storage of Garments which is to be used for testing data source and models which depends on storage of garments
-
+//PersistenceStorageMock is actually a temporary storage of Garments which is to be used for testing data source and models which depends on storage of garments
 class PersistenceStorageMock: StorageProtocol {
     private var garments = [Garment]()
     
